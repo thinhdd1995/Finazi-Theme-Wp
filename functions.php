@@ -12,7 +12,8 @@ define('CORE', THEME_URL . "/core");
  Nhung file /core/init.php
 **/
 require_once( CORE . "/init.php");
-
+// Register custom navigation walker
+require_once(CORE . "/wp-bootstrap-navwalker.php");
 
 /**
  @ thiet lap chieu rong noi dung
@@ -64,7 +65,7 @@ if (!function_exists('finazi_theme_setup')){
 		$sidebar = array(
 			'name' => __('Main Sidebar' , 'finazi'),
 			'id' => 'main-sidebar',
-			'description' => 'Main sidebar for Duc Thinh theme',
+			'description' => 'Main sidebar for Finazi theme',
 			'class' => 'main-sidebar' ,
 			'before_title' => '<h3 class="widgettitle">',
 			'after_title' => '</h3>'
@@ -73,6 +74,9 @@ if (!function_exists('finazi_theme_setup')){
 	}	
 	add_action( 'init', 'finazi_theme_setup');
 }
+//register sidebar footer
+
+
 // add tag support to pages
 function tags_support_all() {
 	register_taxonomy_for_object_type('post_tag', 'page');
@@ -99,13 +103,19 @@ TEMPLATE FUNCTION
 
 /*===========nhúng file ==========*/
 function finazi_style(){
-	wp_register_style( 'main-style', get_template_directory_uri() . "/layout/css/style.css", 'all' );
+	wp_register_style( 'main-style', get_template_directory_uri() . "/layout/css/main.css", 'all' );
 	wp_enqueue_style('main-style');
+	wp_register_script('jquery-3.2.1-script', get_template_directory_uri() . "/layout/js/jquery-3.2.1.min.js");
+	wp_enqueue_script('jquery-3.2.1-script');
+	wp_register_script('setting-script', get_template_directory_uri() . "/layout/js/setting.js");
+	wp_enqueue_script('setting-script');
+	
+	
 
 	//font-awsome
-	wp_register_style( 'font-awsome-style', get_template_directory_uri() . "/layout/css/font-awsome.css", 'all' );
+	wp_register_style( 'font-awsome-style', get_template_directory_uri() . "/layout/css/font-awesome.css", 'all' );
 	wp_enqueue_style('font-awsome-style');
-	wp_register_script('font-awsome-script', get_template_directory_uri() . "/layout/js/font-awsome.js" , array('jquery'));
+	wp_register_script('font-awsome-script', get_template_directory_uri() . "/layout/js/font-awesome.js" , array('jquery'));
 	wp_enqueue_script('font-awsome-script');
 
 	// bootstrap

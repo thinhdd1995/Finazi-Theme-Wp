@@ -1,0 +1,455 @@
+/*
+*Theme Name : Finazi Theme 2017;
+* description: Simple theme designed by Duc Thinh
+* Theme URI : http://Finazi.com
+* Version: 1.0
+* Author: Duc Thinh
+* Author URL : ducthinh.com
+* Tags: basic, two columns , post format
+* Textdomain: finazi
+* Language Folder: /languages
+*/
+@import 'variables';
+@import url(reset.css);
+/*================================================*/
+
+/**
+ * - Reset
+ *
+ * Resetting and rebuilding styles have been helped along thanks to the fine
+ * work of Eric Meyer, Nicolas Gallagher, Jonathan Neal, and Blueprint.
+ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 62.5%;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	background: #f1f1f1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
+
+fieldset {
+	min-width: inherit;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	quotes: none;
+}
+
+a:focus {
+	outline: 2px solid #c1c1c1;
+	outline: 2px solid rgba(51, 51, 51, 0.3);
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+a img {
+	border: 0;
+}
+
+/********** Header **********/
+#header{
+	font-family: @opensans-font-stack;
+	.top-header{	
+		#top-bar{
+			background: @Big-stone;
+			color: @white;
+			height: 50px;
+			padding: 0.5em 0;
+			font-size: 13px;
+			.language-option{
+				select{
+					background: @Big-stone;
+					border: 0 ;
+					padding: 0.5em 0;
+					cursor: pointer;
+				}
+			}
+			.list-contact{
+				margin-left: 180px;
+				margin-bottom: 0;
+				ul li{
+					float: left;
+					padding: 0 23px 0;
+					margin-top: 10px;
+				}
+				a{
+					margin-left: 10px;
+				    display: flex;
+				    justify-content: center;
+				    align-items: center;
+				    align-content: center;
+				    font-weight: 700;
+				    width: 210px;
+					height: 50px;
+					-webkit-transform: skew(-20deg);
+					-moz-transform: skew(-20deg);
+					-o-transform: skew(-20deg);
+					background: @Bright-Turquoise;
+					color:  @Big-stone;
+					position: relative;
+					margin: -17px;
+					font-style: normal;
+					&:hover{
+						text-decoration: none;
+						font-size: 15px;
+					}
+					.fa,span{
+						-webkit-transform: skew(20deg);
+						-moz-transform: skew(20deg);
+						-o-transform: skew(20deg);
+					}
+				}
+			}
+			@media(max-width: 1200px){
+				display: none;
+			}
+		}
+
+		nav{
+			height: 115px;
+			position: relative;
+			background: @white;
+			-webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+			box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+			
+			@media(max-width: @brk-medium){
+				height: auto !important;
+				margin-left: 0.5em;
+				.navbar-brand{
+					img{
+						width: 80%;
+						margin: -1em 0
+					}
+				}				
+			}
+			
+		}
+		.navbar{
+			margin: 0;
+		}
+		.navbar-collapse{
+			padding: 2em 0;
+			.nav{
+				margin-left: 14em;
+				li a{
+					text-transform: uppercase;
+					font-weight: 600;
+					font-size: 14px;
+					color: @Big-stone;
+					background: transparent;
+					&:hover{
+						color: @Bright-Turquoise;
+					}
+				}
+			}
+		}
+
+		@media(max-width: @brk-large){
+			.navbar-collapse{
+				padding: 0;
+				margin: 0;
+				.nav{
+					margin-left: 0;
+				}
+			}
+
+			.navbar-brand{
+				img{			
+		    		width: 80%;
+				}
+			}
+		}
+	}
+	.slider{
+		background: url('http://localhost/finazi/wp-content/themes/Finazi/layout/images/slider.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		opacity: 0.6;
+		height: 195px;
+		background-position: center;
+	}
+}
+
+/********** Footer **********/
+#footer{
+	line-height: 24px;
+	color: #b0b3b7;
+	font-family: @opensans-font-stack;
+	.free-quote{
+		font-size: 16pt;
+		font-weight: 600;
+		padding: 1.6em 0;
+		color: @white;
+		background: url('http://localhost/finazi/wp-content/themes/Finazi/layout/images/free-quote.png');
+		background-size: cover;
+		background-position: center;
+		span{
+			letter-spacing:1px;
+			b{
+				color: @Big-stone;
+			}
+		}
+		.quote-btn{
+			margin-left: 2.2em;
+			background: @white;
+			border: 0;
+			padding: 0.5em ;
+			color: @Big-stone;
+			height: 50px;
+			width: 180px;
+			text-transform: uppercase;	
+			font-size: 16px;
+			font-family: @Source-Sans;
+			font-weight: bold;
+
+		}
+		@media(max-width:@brk-large ){
+			.quote-btn{
+				margin: 1em 0 0 0;
+			}
+		}
+	}
+	.copyright{
+		padding: 2.2em 0;
+		background: #0e1a28;
+		a{
+			color: @Bright-Turquoise;
+			text-transform: capitalize;
+			&:hover{
+				text-decoration: none;
+				opacity: 0.5;
+			}
+		}
+		strong{
+			color: #f5f5f5;
+			opacity: 0.8;
+		}
+		.button-to-top{
+			float: right;
+			button{
+				background: #222831;
+				color: @Bright-Turquoise;
+				border: 0;
+				padding: 0.4em 0.7em;
+			}
+			@media(max-width:@brk-medium){
+				float: inherit;
+				margin: 1em 0;
+			}
+		}
+		
+	}
+	.footer-area{
+		background: @Big-stone;
+		padding: 50px 0 80px 0;
+		h3{
+			text-transform: capitalize;
+			font-family: @Source-Sans;
+			font-weight: bold;
+			font-size: 15pt;
+			color: @white;
+			margin: 2.6em 0 1.6em 0;
+		}
+		.about-us{
+			img{
+				margin: 1.5em 0;
+			}
+			p{
+				font-family: @opensans-font-stack;
+				&:after{
+					content: '';
+					position: relative;
+					left: 0;
+					display: inline-block;
+					height: 1em;
+					width: 100%;
+					border-bottom: 1px solid #2b3a4b;
+					margin: 1.5em 0;
+				}
+			}
+			h5{
+				text-transform: uppercase;
+				font-weight: 600;
+				color: @white;
+				margin: 0 0 1em 0;
+			}
+			span{
+				.fa{
+					font-size: 22px;
+					color: #b0b3b7 ;
+					padding-right: 0.5em;
+					&:hover{
+						color: @Bright-Turquoise;
+					}
+				}
+			}
+		}
+		.main-info{
+			.list-info{
+				li{
+					margin-bottom: 1em;
+					display: table;
+					strong{
+						margin-left: 5px;
+					}
+				}
+				.fa{
+				 	font-size: 20px;
+				 	padding-right: 10px;
+				 	color: @Bright-Turquoise;
+				 	display: table-cell;
+				}
+				.fa-envelope{
+					font-size: 15px;
+					padding-right: 0.7em;
+				}
+				&:after{
+					content: '';
+					position: relative;
+					left: 0;
+					display: inline-block;
+					height: 1em;
+					width: 100%;
+					border-bottom: 1px solid #2b3a4b;
+					margin: 0.6em 0;
+				}
+			}
+			span{
+				color: @white;
+				font-weight: 400;
+				a{
+					font-weight: 600;
+					text-decoration: underline;
+					color: @white;
+					&:hover{
+						color: @Bright-Turquoise;
+					}
+				}
+			}
+		}
+		.important-link{
+			ul li{
+				margin-bottom: 0.9em;
+				a{
+					color: #b0b3b7;
+					text-transform: capitalize;
+					&:hover{
+						color: @Bright-Turquoise;
+						text-decoration: none;
+					}
+				}
+				&:before{
+					content: "\00bb";
+					color: #b0b3b7;
+					padding-right: 1em;
+				}
+			}
+		}
+		.form-sub{
+			input{
+				width: 275px;
+			    height: 45px;
+			    background: #e8e8e8;
+			    margin-bottom: 0.5em;
+			    padding: 0 0.5em;
+			}
+			#subscribe-btn{	
+				width: 275px;			
+			    border: 2px solid @Bright-Turquoise;
+			    cursor: pointer;
+			    background: transparent;
+			    color: @Bright-Turquoise;
+			    text-transform: uppercase;
+			    margin-bottom: 1em;
+			    font-weight: 600;
+			    height: 45px;
+			    display: block;
+				box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+				outline: 1px solid;
+				outline-color: rgba(255, 255, 255, .5);
+				outline-offset: 0px;
+				transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+				    &:hover{
+				    	border: 1px solid @Bright-Turquoise;
+						box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+						outline-color: rgba(255, 255, 255, 0);
+						outline-offset: 15px;
+						text-shadow: 1px 1px 2px #427388;
+					}
+			}
+		}
+	}
+	
+}
