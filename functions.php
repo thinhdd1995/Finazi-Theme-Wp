@@ -14,7 +14,8 @@ define('CORE', THEME_URL . "/core");
 require_once( CORE . "/init.php");
 // Register custom navigation walker
 require_once(CORE . "/wp-bootstrap-navwalker.php");
-
+//register recent post widget thumnail
+require_once( CORE . "/recentpost.php");
 /**
  @ thiet lap chieu rong noi dung
 **/
@@ -94,8 +95,6 @@ add_action('pre_get_posts', 'tags_support_query');
 /*
 TEMPLATE FUNCTION
  */
-
-
 
 
 
