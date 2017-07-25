@@ -86,6 +86,7 @@ td {
   outline: 0;
   padding: 0;
   vertical-align: baseline;
+  line-height: 24px;
 }
 html {
   -webkit-box-sizing: border-box;
@@ -239,8 +240,8 @@ a img {
 #header .top-header .navbar {
   margin: 0;
 }
-#header .top-header .navbar-collapse {
-  padding: 2em 0;
+#header .top-header .navbar img {
+  margin-top: 9px;
 }
 #header .top-header .navbar-collapse .nav {
   margin-left: 14em;
@@ -251,9 +252,15 @@ a img {
   font-size: 14px;
   color: #152639;
   background: transparent;
+  margin-top: 31px;
 }
 #header .top-header .navbar-collapse .nav li a:hover {
   color: #14f1e4;
+}
+@media (max-width: 768px) {
+  #header .top-header .navbar-collapse .nav li a {
+    margin-top: 0;
+  }
 }
 @media (max-width: 1024px) {
   #header .top-header .navbar-collapse {
@@ -264,7 +271,7 @@ a img {
     margin-left: 0;
   }
   #header .top-header .navbar-brand img {
-    width: 80%;
+    margin: 0;
   }
 }
 #header .slider {
@@ -447,7 +454,10 @@ a img {
   height: 45px;
   background: #e8e8e8;
   margin-bottom: 0.5em;
-  padding: 0 0.5em;
+  padding: 0 1.2em;
+}
+#footer .footer-area .form-sub p {
+  font-size: 12px;
 }
 #footer .footer-area .form-sub #subscribe-btn {
   width: 275px;
@@ -472,4 +482,156 @@ a img {
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
   text-shadow: 1px 1px 2px #427388;
+}
+/********** Sidebar**********/
+#sidebar {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 24px;
+}
+#sidebar h3 {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.8px;
+  font-size: 24px;
+}
+#sidebar h3:after {
+  background: #14f1e4;
+  content: "";
+  display: block;
+  height: 3px;
+  margin: 15px 0 25px 0;
+  width: 60px;
+}
+#sidebar ul,
+#sidebar ol,
+#sidebar li {
+  list-style: none;
+  padding: 0;
+}
+#sidebar .widget {
+  margin-bottom: 50px;
+}
+#sidebar .widget .search-form-box .input-group-addon {
+  background: white !important;
+  border-radius: 0px;
+}
+#sidebar .widget .search-form-box .form-control {
+  border-right: 0;
+  box-shadow: 0 0 0;
+  border-color: #ccc;
+  height: 45px;
+  padding-left: 2em;
+  border-radius: 0px;
+}
+#sidebar .widget .search-form-box .form-control::placeholder {
+  font-style: italic;
+  color: #a9a9a9;
+  font-family: 'Open Sans', sans-serif;
+}
+#sidebar .widget .search-form-box button {
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  color: #a9a9a9;
+}
+#sidebar .widget_categories ul li {
+  background: #f8f8f8;
+  height: 50px;
+  padding: 1em 0;
+  margin-bottom: 1px;
+}
+#sidebar .widget_categories ul li a {
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+#sidebar .widget_categories ul li:before {
+  content: "•";
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 0.6em;
+  margin-left: 30px;
+  cursor: pointer;
+}
+#sidebar .widget_categories ul li:hover a {
+  text-decoration: none;
+  color: #14f1e4;
+}
+#sidebar .widget_categories ul li:hover:before {
+  content: '\00bb';
+  color: #14f1e4;
+}
+#sidebar .widget_archive ul li:before {
+  content: "•";
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 0.6em;
+}
+#sidebar .widget_archive ul li:after {
+  content: '';
+  position: relative;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px dotted #c6c6c6;
+}
+#sidebar .widget_archive ul li a {
+  color: #333;
+  font-weight: 300;
+}
+#sidebar .widget_archive ul li a:hover {
+  text-decoration: none;
+  color: #14f1e4;
+}
+#sidebar .widget_tag_cloud a {
+  display: inline-block;
+  font-size: 14px !important;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 0.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+#sidebar .widget_tag_cloud a:hover {
+  color: #14f1e4;
+  text-decoration: none;
+}
+#sidebar .widget_recent_post li {
+  border-bottom: 1px dotted #dcdcdc;
+  padding-bottom: 21px;
+  margin-bottom: 21px;
+}
+#sidebar .widget_recent_post li .recentpost-thumb {
+  float: left;
+  margin-right: 13px;
+}
+#sidebar .widget_recent_post li .recentpost-thumb img {
+  width: 100px;
+  height: 90px;
+}
+#sidebar .widget_recent_post li .recentpost-content h4 a {
+  color: #333;
+  font-weight: 700;
+}
+#sidebar .widget_recent_post li .recentpost-content h4 a:hover {
+  text-decoration: none;
+  color: #14f1e4;
+}
+#sidebar .widget_recent_post li .recentpost-content .recentpost-date {
+  color: #b4b4b4;
+}
+#sidebar .widget_recent_post li .recentpost-content .recentpost-date span {
+  color: #b4b4b4;
+  display: inline-block;
+  position: relative;
+}
+/********** Content **********/
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+  background: #ffffff;
+  font-family: 'Open Sans', sans-serif;
 }
